@@ -1,0 +1,42 @@
+package usj.renting;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class SedanPriceTest {
+
+	@Test
+	public void testChase10() {
+		SedanPrice sedan = new SedanPrice();
+		
+		assertEquals(sedan.getPriceCode(),Car.SEDAN);
+	}
+	
+	@Test
+	public void testChase11() {
+		SedanPrice sedan = new SedanPrice();
+		
+		assertEquals(sedan.getCharge(1),1.5,0.01);
+	}
+	
+	@Test
+	public void testChase12() {
+		SedanPrice sedan = new SedanPrice();
+		
+		assertEquals(sedan.getCharge(3),1.5,0.01);
+	}
+
+	@Test
+	public void testChase13() {
+		SedanPrice sedan = new SedanPrice();
+		
+		assertEquals(sedan.getCharge(7),7.5,0.01);
+	}
+	
+	@Test
+	public void testChase14() {
+		SedanPrice sedan = new SedanPrice();
+		
+		assertEquals(sedan.getLoyaltyPoints(0),1);
+	}
+}
