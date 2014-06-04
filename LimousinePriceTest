@@ -1,0 +1,37 @@
+package usj.renting;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class LimousinePriceTest {
+
+	@Test
+	public void testChase6() {
+		LimousinePrice limousine = new LimousinePrice();
+		limousine.getPriceCode();
+		
+		assertEquals("INVALID",Car.LIMOUSINE);
+	}
+	
+	public void testChase7() {
+		LimousinePrice limousine = new LimousinePrice();
+		limousine.getCharge(2);
+		
+		assertEquals("INVALID",6);
+	}
+	
+	public void testChase8() {
+		LimousinePrice limousine = new LimousinePrice();
+		limousine.getLoyaltyPoints(1);
+		
+		assertEquals("INVALID",1);
+	}
+	
+	public void testChase9() {
+		LimousinePrice limousine = new LimousinePrice();
+		limousine.getLoyaltyPoints(5);
+		
+		assertEquals("INVALID",2);
+	}
+
+}
